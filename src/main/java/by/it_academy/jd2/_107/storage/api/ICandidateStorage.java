@@ -9,4 +9,6 @@ public interface ICandidateStorage {
     String get(Long id);
 
     Map<Long, String> get();
+
+    void remove(String name);
 }

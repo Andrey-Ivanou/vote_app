@@ -78,3 +78,11 @@ CREATE SCHEMA app
          	app.vote.id
          	GROUP BY app.genre.id
          	ORDER BY 2;
+
+         DELETE FROM app.artist
+         	WHERE id IN (SELECT id
+         	FROM app.artist
+         	GROUP BY app.artist.id
+         	HAVING name LIKE '_%');
+
+
